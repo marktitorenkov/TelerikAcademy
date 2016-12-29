@@ -1,0 +1,26 @@
+body {
+	background: #a9a9a9;
+}
+header {
+	color: #fafad2;
+}
+body > header, body > footer {
+	text-align: center;	
+}
+ul {
+	display: inline-block;
+	list-style: none;
+}
+li:nth-child(2) {
+	background: #d3d3d3;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+}
+p > a {
+	color: #000;
+}
+a:hover {
+	text-decoration: underline;
+}

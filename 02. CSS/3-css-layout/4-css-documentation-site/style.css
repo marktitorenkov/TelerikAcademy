@@ -1,0 +1,52 @@
+body {
+	font-family: sans-serif;
+}
+main {
+	float: left;
+	width: 650px;
+}
+nav a {
+	display: inline-block;
+	padding: 5px 25px;
+	border: 1px solid #000;
+	color: #000;
+	text-decoration: none;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+section {
+	padding: 10px 0;
+}
+section .title {
+	padding: 5px;
+	color: #fff;
+	background: #888;
+}
+section img {
+	float: left;
+	margin: 10px;
+}
+section a {
+	display: inline-block;
+	color: #a00;
+	text-decoration: underline;
+}
+.left {
+	width: 150px;
+	float: left;
+}
+.left ul {
+	list-style: none;
+	margin: 15px 0;
+	padding: 0;
+}
+.left a {
+	color: black;
+}
+.left a.selected {
+	color: #a00;
+}
+.left a:hover {
+	color: #a00;
+}

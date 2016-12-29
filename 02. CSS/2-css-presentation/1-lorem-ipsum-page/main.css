@@ -1,0 +1,12 @@
+section {
+	font-family: Consolas, Helvetica, sans-serif;
+	color: #0094ff;
+	width: 800px;
+}
+section::first-line {
+	font-weight: bold;
+}
+section::first-letter {
+	font-family: 'Edwardian Script ITC', Helvetica, sans-serif;
+	font-size: 45px;
+}

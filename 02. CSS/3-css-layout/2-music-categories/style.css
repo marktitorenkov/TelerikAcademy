@@ -1,0 +1,44 @@
+body {
+	font-family: sans-serif;
+	background: beige;
+}
+.box {
+	width: 400px;
+	padding: 15px;
+	border: 1px solid grey;
+	margin-bottom: 30px;
+	background: white;
+}
+	.box > img {
+		float: left;
+		margin-right: 15px;
+	}
+	.box > p {
+		margin: 0;
+		padding: 0;
+	}
+	.box > .btns {
+		text-align: right;
+	}
+	.box .btn {
+		position: relative;
+		height: 19.5px;
+		width: 40px;
+		background: url('imgs/btn.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+	}
+	.box .btn:hover {
+		cursor: pointer;
+		box-shadow: 0 0 5px 0 rgba(255, 0, 0, 0.7);
+	}
+	.box .btn-text {
+		top: 0;
+		left: 0;
+		right: 0;
+		line-height: 20px;
+		vertical-align: middle;
+		color: white;
+		position: absolute;
+	}

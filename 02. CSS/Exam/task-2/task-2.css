@@ -1,0 +1,101 @@
+body {
+	background: rgb(38, 41, 44);
+	color: rgb(255, 255, 255);
+}
+
+.container {
+	width: 700px;
+}
+
+.navigation {
+	font-family: sans-serif;
+	float: right;
+}
+.nav-tabs {
+	text-align: center;
+	list-style: none;
+}
+
+.nav-item {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	background: rgb(128, 128, 124);
+	border: 1px solid rgb(100, 100, 100);
+	box-sizing: border-box;
+	background: rgb(60, 60, 60);
+	display: none;
+}
+.nav-item.show-nav {
+	display: block;
+}
+
+.nav-tabs:hover .nav-item {
+	display: block;
+}
+
+.nav-item:hover {
+	background: rgb(128, 128, 124);
+}
+
+
+.nav-item.file-html::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	background: url('imgs/html-icon.png');
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+}
+
+.nav-item.file-css::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	background: url('imgs/css-icon.png');
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+}
+
+.nav-item.file-sass::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	background: url('imgs/sass-icon.png');
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+}
+
+.code-lines li:hover {
+	background: rgb(76, 83, 84);
+}
+.code-lines li:hover .selector {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.selector {
+	color: rgb(164, 228, 5);
+}
+.property {
+	margin-left: 15px;
+	color: rgb(95, 216, 240);
+}
+.punctuation {
+	color: rgb(255, 255, 255);
+}
+.measure {
+	color: rgb(249, 29, 111);
+}
+.function {
+	color: rgb(165, 42, 43);
+}
+.value {
+	color: rgb(175, 125, 255);
+}

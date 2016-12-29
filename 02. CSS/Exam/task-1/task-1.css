@@ -1,0 +1,98 @@
+body {
+	background: rgb(238, 238, 238);
+	font-family: sans-serif;
+	font-size: 20px;
+	margin: 16px;
+}
+#wrapper {
+	background: white;
+	padding: 20px;
+	width: 560px;
+	height: 620px;
+	position: relative;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
+	box-sizing: border-box;
+}
+.publisher {
+	color: rgb(50, 50, 50);
+	font-size: 18px;
+	margin-left: 10px;
+}
+.importance {
+	font-weight: bold;
+	font-size: 18px;
+	color: rgb(50, 50, 50);
+	text-transform: uppercase;
+	border-bottom: 1px solid rgb(235, 235, 235);
+	padding: 20px 0;
+}
+.timestamp {
+	font-size: 15px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: rgb(185, 185, 185);
+}
+.title {
+	color: rgb(95, 95, 95);
+	padding: 22px 0;
+	font-size: 28px;
+}
+.main-image img {
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+.likes {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	line-height: 45px;
+	color: rgb(140, 140, 140);
+}
+.likes::before {
+	content: "";
+	background: url('imgs/number.png');
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	vertical-align: middle;
+	margin-right: 10px;
+	background-size: contain;
+}
+
+.comments {
+	position: absolute;
+	bottom: 20px;
+	right: 110px;
+	line-height: 45px;
+	color: rgb(140, 140, 140);
+}
+.comments::before {
+	content: "";
+	background: url('imgs/comment.png');
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	vertical-align: middle;
+	margin-right: 10px;
+	background-size: contain;
+}
+
+.shares {
+	position: absolute;
+	bottom: 20px;
+	right: 35px;
+	line-height: 45px;
+	color: rgb(140, 140, 140);
+}
+.shares::before {
+	content: "";
+	background: url('imgs/share.png');
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	vertical-align: middle;
+	margin-right: 10px;
+	background-size: contain;
+}

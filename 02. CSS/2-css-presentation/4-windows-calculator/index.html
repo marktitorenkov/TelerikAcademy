@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Windows Calculator</title>
+	<link rel="stylesheet" href="main.css">
+	<script type="text/javascript">
+	function colorChange(value) {
+		document.getElementById('window').style.backgroundColor = 'hsl(' + value + ', 70%, 50%)';
+	}
+	</script>
+</head>
+<body>
+	<div id="window">
+		<div id="window-icon"></div>
+		<div id="window-title">Calculator</div>
+		<div id="window-caption-buttons"></div>
+		<div id="window-content">
+			<ul id="menu-bar">
+				<li>View</li>
+				<li>Edit</li>
+				<li>Help</li>
+			</ul>
+			<div id="app-content">
+				<input id="display" type="text" value="8854455">
+				<table id="bits">
+					<tbody>
+						<tr>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+							<td>0000</td>
+						</tr>
+						<tr>
+							<td colspan="4">63</td>
+							<td colspan="3">47</td>
+							<td>32</td>
+						</tr>
+						<tr>
+							<td>0000</td>
+							<td>0000</td>
+							<td>1000</td>
+							<td>0111</td>
+							<td>0001</td>
+							<td>1011</td>
+							<td>1011</td>
+							<td>0111</td>
+						</tr>
+						<tr>
+							<td colspan="4">31</td>
+							<td colspan="3">15</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="main-input">
+					<div id="num-system">
+						<label for="radio-hex">
+							<input name="num-system-radio" id="radio-hex" type="radio">Hex
+						</label>
+						<label for="radio-dec">
+							<input name="num-system-radio" id="radio-dec" type="radio" checked="checked">Dec
+						</label>
+						<label for="radio-oct">
+							<input name="num-system-radio" id="radio-oct" type="radio">Oct
+						</label>
+						<label for="radio-bin">
+							<input name="num-system-radio" id="radio-bin" type="radio">Bin
+						</label>		
+					</div>
+					<div id="num-size">
+						<label for="radio-qword">
+							<input name="num-size-radio" id="radio-qword" type="radio" checked="checked">Qword
+						</label>
+						<label for="radio-dword">
+							<input name="num-size-radio" id="radio-dword" type="radio">Dword
+						</label>
+						<label for="radio-word">
+							<input name="num-size-radio" id="radio-word" type="radio">Word
+						</label>
+						<label for="radio-byte">
+							<input name="num-size-radio" id="radio-byte" type="radio">Byte
+						</label>
+					</div>
+					<table id="buttons">
+						<tbody>
+							<tr>
+								<td><button class="btn disabled"></button></td>
+								<td><button class="btn">Mod</button></td>
+								<td><button class="btn disabled">A</button></td>
+								<td><button class="btn disabled">MC</button></td>
+								<td><button class="btn disabled">MR</button></td>
+								<td><button class="btn disabled">MS</button></td>
+								<td><button class="btn disabled">M+</button></td>
+								<td><button class="btn disabled">M-</button></td>
+							</tr>
+							<tr>
+								<td><button class="btn">(</button></td>
+								<td><button class="btn">)</button></td>
+								<td><button class="btn disabled">B</button></td>
+								<td><button class="btn">&larr;</button></td>
+								<td><button class="btn">CE</button></td>
+								<td><button class="btn">C</button></td>
+								<td><button class="btn">&plusmn;</button></td>
+								<td><button class="btn disabled">&radic;</button></td>
+							</tr>
+							<tr>
+								<td><button class="btn">RoL</button></td>
+								<td><button class="btn">RoR</button></td>
+								<td><button class="btn disabled">C</button></td>
+								<td><button class="btn white">7</button></td>
+								<td><button class="btn white">8</button></td>
+								<td><button class="btn white">9</button></td>
+								<td><button class="btn">/</button></td>
+								<td><button class="btn disabled">%</button></td>
+							</tr>
+							<tr>
+								<td><button class="btn">Or</button></td>
+								<td><button class="btn">Xor</button></td>
+								<td><button class="btn disabled">D</button></td>
+								<td><button class="btn white">4</button></td>
+								<td><button class="btn white">5</button></td>
+								<td><button class="btn white">6</button></td>
+								<td><button class="btn">*</button></td>
+								<td><button class="btn disabled">1/x</button></td>
+							</tr>
+							<tr>
+								<td><button class="btn">Lsh</button></td>
+								<td><button class="btn">Rsh</button></td>
+								<td><button class="btn disabled">E</button></td>
+								<td><button class="btn white">1</button></td>
+								<td><button class="btn white">2</button></td>
+								<td><button class="btn white">3</button></td>
+								<td><button class="btn">-</button></td>
+								<td rowspan="2"><button class="btn">=</button></td>
+							</tr>
+							<tr>
+								<td><button class="btn">Not</button></td>
+								<td><button class="btn">And</button></td>
+								<td><button class="btn disabled">F</button></td>
+								<td colspan="2"><button class="btn white">0</button></td>
+								<td><button class="btn disabled">.</button></td>
+								<td><button class="btn">+</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="hue">
+		<label for="hue-control" id="hue-control-label">Hue: </label>
+		<input id="hue-control" type="range" oninput="colorChange(this.value)" onchange="colorChange(this.value)" min="0" max="360" step="1" value="180">
+	</div>
+</body>
+</html>

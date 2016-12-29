@@ -1,0 +1,65 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+section {
+	display: inline-block;
+	width: 620px;
+	background: rgb(30, 55, 65);
+	color: white;
+	padding: 10px 20px 20px 0;
+}
+a {
+	color: rgb(200, 200, 200);
+	text-decoration: none;
+}
+a:hover {
+	color: white;
+	text-decoration: underline;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+li {
+	font-size: 16px;
+}
+
+#nav li {
+	display: inline-block;
+	padding: 10px;
+	margin-right: 1px;
+	background: rgb(75, 95, 103);
+}
+#nav li.active {
+	background: rgb(30, 55, 65);	
+}
+#nav li.active a {
+	color: white;
+}
+
+#videos {
+	margin-top: 15px;
+	float: left;
+}
+#videos li {
+	width: 250px;
+	font-size: 14px;
+	padding: 10px;
+}
+#videos li.active {
+	background: rgb(0, 150, 140);
+}
+#videos li.active a {
+	color: white;
+}
+
+aside {
+	margin-top: 15px;
+}
+aside img {
+	float: left;
+}
