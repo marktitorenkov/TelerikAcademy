@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<style>
+	table, input {
+		font-family: Sans-Serif;
+		font-weight: bold;
+		font-size: 33px;
+		background: #26C6DA;
+	}
+	table, table td {
+		text-align: center;
+		border-collapse: collapse;
+		border: 2px solid #011;
+	}
+	table td {
+		width: 70px;
+		height: 70px;
+	}
+	table input {
+		text-align: right;
+		height: 100%;
+		width: 96%;
+		padding: 2%;
+		border: none;
+	}
+	table td:hover {
+		background: #47E8FC;
+		transition: .3s;
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="4">
+				<input type="text" value="123" autofocus>
+			</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>+</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>*</td>
+		</tr>
+		<tr>
+			<td colspan="2">0</td>
+			<td>.</td>
+			<td>/</td>
+		</tr>
+	</table>
+</body>
+</html>

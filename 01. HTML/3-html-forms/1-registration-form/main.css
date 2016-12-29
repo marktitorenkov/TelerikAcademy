@@ -1,0 +1,24 @@
+body {
+	font-family: Sans-Serif;
+}
+table, td {
+	border-collapse: collapse;
+	border: 1px solid #777;
+}
+td {
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+td:nth-child(odd) {
+	width: 50px;	
+	font-weight: bold;
+	text-align: right;
+}
+input[type=text], input[type=email] {
+	width: 270px;
+}
+textarea {
+	width: 268px;
+	height: 50px;
+	resize: none;
+}

@@ -1,0 +1,29 @@
+body {
+	font-family: Sans-Serif;
+	font-size: 14px;
+}
+table, td {
+	border-collapse: collapse;
+	border: 1px solid #777;
+}
+thead, tfoot  {
+	background: #eee;
+	background: linear-gradient(#eee, #ccc);
+}
+td {
+	padding: 5px 7px;
+}
+td:nth-child(1), td:nth-child(6) {
+	width: 70px;
+}
+td:nth-child(2) {
+	width: 300px;
+}
+td:nth-child(3), td:nth-child(4), td:nth-child(5)  {
+	width: 150px;
+}
+a {
+	color: #000;
+	text-decoration: none;
+	margin: 0 5px;
+}

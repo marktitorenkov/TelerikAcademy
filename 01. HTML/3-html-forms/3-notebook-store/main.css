@@ -1,0 +1,13 @@
+body {
+	font-family: Sans-Serif;
+}
+#maintable {
+	text-align: center;
+	border-collapse: collapse;
+	border: 2px solid #777;
+}
+a {
+	font-size: 25px;
+	color: deepskyblue;
+	margin: 0 5px;
+}

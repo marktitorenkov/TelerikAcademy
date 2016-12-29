@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<form action="" method="POST">
+		<table>
+			<tr>
+				<td>Last Name</td>
+				<td colspan="3"><input id="lname" type="text"></td>
+			</tr>
+			<tr>
+				<td>First Name</td>
+				<td colspan="3"><input id="fname" type="text"</td>
+			</tr>
+			<tr>
+				<td>Address</th>
+				<td colspan="3">
+					<textarea></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>City</td>
+				<td><input id="city" type="text" style="width: 148px">
+				<td>State</td>
+				<td><input id="state" type="text" style="width: 30px"></td>
+			</tr>
+			<tr>
+				<td>Zip/Postal Code</td>
+				<td colspan="3"><input id="zip" type="text" style="Width: 148px"></td>
+			</tr>
+			<tr>
+				<td>Country</td>
+				<td colspan="3">
+					<select style="width: 142px">
+						<option value="bulgaria">Bulgaria</option>
+						<option value="other">Other</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Phone (country code, area code, number)</td>
+				<td colspan="3">( +<input type="text" style="width: 55px"> ) <input type="text" style="width: 55px"> - <input type="text" style="width: 102px"></td>
+			</tr>
+			<tr>
+				<td>E-mail</td>
+				<td colspan="3"><input type="email"></td>
+			</tr>
+			<tr>
+				<td>Birth</td>
+				<td colspan="3">
+					Month <input type="text" style="width: 20px">
+					Day <input type="text" style="width: 20px">
+					Year (4 digit) <input type="text" style="width: 35px">
+				</td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td colspan="3">
+					<select>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Starting Date</td>
+				<td colspan="3">
+					<input type="radio" name="startDate" value="spring-2006">Spring 2006
+					<input type="radio" name="startDate" value="summer-2006">Summer 2006
+				</td>
+			</tr>
+			<tr>
+				<td>Comments/Questions</td>
+				<td colspan="3">
+					<textarea></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5" style="background: PaleTurquoise; text-align: center">
+					<input type="submit" value="Submit">
+					<input type="reset" value="Clear This Form">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
