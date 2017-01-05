@@ -10,10 +10,16 @@ class MythicalNumbers
 		int c = num[2] - '0';
 
 		if (c == 0)
+		{
 			Console.WriteLine("{0:F2}", a * b);
+		}
 		else if (c > 0 && c <= 5)
+		{
 			Console.WriteLine("{0:F2}", (a * b) / (float)c);
+		}
 		else if (c > 5)
+		{
 			Console.WriteLine("{0:F2}", (a + b) * c);
+		}
 	}
 }
