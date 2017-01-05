@@ -1,4 +1,4 @@
-﻿namespace DefiningClassesPart2
+﻿namespace Point3DTask
 {
 	using System;
 	using System.IO;
