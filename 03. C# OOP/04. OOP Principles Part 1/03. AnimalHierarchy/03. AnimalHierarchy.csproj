@@ -43,11 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IAnimal.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Cat.cs" />
     <Compile Include="Models\Dog.cs" />
     <Compile Include="Models\Frog.cs" />
-    <Compile Include="Models\ISound.cs" />
+    <Compile Include="Interfaces\ISound.cs" />
     <Compile Include="Models\Kitten.cs" />
     <Compile Include="Models\Sex.cs" />
     <Compile Include="Models\Tomcat.cs" />
@@ -56,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Diagram.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

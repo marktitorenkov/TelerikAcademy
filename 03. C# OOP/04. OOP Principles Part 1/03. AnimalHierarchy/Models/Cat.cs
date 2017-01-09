@@ -1,8 +1,9 @@
 ﻿namespace AnimalHierarchy.Models
 {
 	using System;
+	using Interfaces;
 
-	public class Cat: Animal, ISound
+	public class Cat: Animal, IAnimal, ISound
 	{
 		public Cat(string name, int age, Sex sex)
 			: base(name, age, sex)

@@ -1,6 +1,8 @@
 ﻿namespace SchoolClasses
 {
-	class Student: Person, IComentable
+	using Interfaces;
+
+	class Student: Person, IStudent, IComentable
 	{
 		public Student(string name, int classNumber)
 			: base(name)

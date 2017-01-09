@@ -1,8 +1,9 @@
 ﻿namespace StudentsAndWorkers.Models
 {
 	using System;
+	using Interfaces;
 
-	public class Student: Human
+	public class Student: Human, IHuman, IStudent
 	{
 		private float grade;
 

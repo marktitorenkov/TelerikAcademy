@@ -1,6 +1,8 @@
 ﻿namespace SchoolClasses
 {
-	abstract public class Person: IComentable
+	using Interfaces;
+
+	abstract public class Person: IPerson, IComentable
 	{
 		public Person(string name)
 		{
@@ -8,7 +10,6 @@
 		}
 
 		public string Name { get; }
-
-		public string Comment { get; set; }
+		public string Comment { get; protected set; }
 	}
 }

@@ -1,8 +1,9 @@
 ﻿namespace SchoolClasses
 {
 	using System.Collections.Generic;
+	using Interfaces;
 
-	class Class: IComentable
+	class Class: IClass, IComentable
 	{
 		public Class(string identifier, IList<Teacher> teachers)
 		{
@@ -15,9 +16,8 @@
 			this.Comment = comment;
 		}
 
-		public IList<Teacher> Teachers { get; }
+		public IEnumerable<Teacher> Teachers { get; }
 		public string Identifier { get; }
-
-		public string Comment { get; set; }
+		public string Comment { get; }
 	}
 }

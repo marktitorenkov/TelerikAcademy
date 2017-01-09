@@ -1,6 +1,8 @@
 ﻿namespace StudentsAndWorkers.Models
 {
-	public class Worker: Human
+	using Interfaces;
+
+	public class Worker: Human, IHuman, IWorker
 	{
 		public Worker(string firstName, string lastName, float weekSalary, float workHoursPerDay)
 			: base(firstName, lastName)

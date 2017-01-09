@@ -1,4 +1,4 @@
-﻿namespace AnimalHierarchy.Models
+﻿namespace AnimalHierarchy.Interfaces
 {
 	public interface ISound
 	{

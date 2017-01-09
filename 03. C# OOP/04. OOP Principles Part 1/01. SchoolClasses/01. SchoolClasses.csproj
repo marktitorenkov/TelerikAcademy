@@ -42,14 +42,21 @@
   <ItemGroup>
     <Compile Include="Class.cs" />
     <Compile Include="Discipline.cs" />
-    <Compile Include="IComentable.cs" />
+    <Compile Include="Interfaces\IClass.cs" />
+    <Compile Include="Interfaces\IComentable.cs" />
+    <Compile Include="Interfaces\IDiscipline.cs" />
+    <Compile Include="Interfaces\IPerson.cs" />
+    <Compile Include="Interfaces\ISchool.cs" />
+    <Compile Include="Interfaces\IStudent.cs" />
+    <Compile Include="Interfaces\ITeacher.cs" />
+    <Compile Include="School.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="Diagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

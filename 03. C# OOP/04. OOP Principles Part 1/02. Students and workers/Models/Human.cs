@@ -1,6 +1,8 @@
 ﻿namespace StudentsAndWorkers.Models
 {
-	public abstract class Human
+	using Interfaces;
+
+	public abstract class Human : IHuman
 	{
 		public Human(string firstName, string lastName)
 		{

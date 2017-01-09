@@ -1,11 +1,16 @@
 ﻿namespace AnimalHierarchy
 {
 	using System;
+	using System.Collections.Generic;
 	using System.Linq;
 	using Models;
 
 	class Startup
 	{
+		static double CalculateAverageAge(IEnumerable<Animal> animals)
+		{
+			return animals.Average(animal => animal.Age);
+		}
 		static void Main()
 		{
 			#region Samples
@@ -37,14 +42,26 @@
 				new Dog("Robbie", 2, Sex.Male),
 				new Dog("Sportaflop", 5, Sex.Male)
 			};
-			var forgs = new Frog[]
+			var frogs = new Frog[]
 			{
 				new Frog("Trevor", 1, Sex.Male),
 				new Frog("Jabba the Hutt", 100, Sex.Female)
 			};
+
+			var animals = new Animal[] { cats.First(), kittens.First(), tomcats.First(), dogs.First(), frogs.First() };
 			#endregion;
 
+			Console.WriteLine($"Average age of cats: {CalculateAverageAge(cats):F1}");
+			Console.WriteLine($"Average age of kittens: {CalculateAverageAge(kittens):F1}");
+			Console.WriteLine($"Average age of tomcats: {CalculateAverageAge(tomcats):F1}");
+			Console.WriteLine($"Average age of dogs: {CalculateAverageAge(dogs):F1}");
+			Console.WriteLine($"Average age of frogs: {CalculateAverageAge(frogs):F1}");
 
+			Console.WriteLine("\nAnimal sounds test:");
+			foreach (var animal in animals)
+			{
+				animal.ProduceSound();
+			}
 		}
 	}
 }

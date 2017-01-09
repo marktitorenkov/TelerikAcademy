@@ -1,8 +1,8 @@
 ﻿namespace AnimalHierarchy.Models
 {
-	using System;
+	using Interfaces;
 
-	public abstract class Animal: ISound
+	public abstract class Animal: IAnimal, ISound
 	{
 		public Animal(string name, int age, Sex sex)
 		{

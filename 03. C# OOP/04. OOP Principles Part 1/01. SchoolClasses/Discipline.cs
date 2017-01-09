@@ -1,6 +1,8 @@
 ﻿namespace SchoolClasses
 {
-	class Discipline: IComentable
+	using Interfaces;
+
+	class Discipline: IDiscipline, IComentable
 	{
 		public Discipline(string name, int lectureCount)
 		{
@@ -16,7 +18,6 @@
 		public string Name { get; }
 		public int LectureCount { get; }
 		public int ExerciseCount { get; }
-
-		public string Comment { get; set; }
+		public string Comment { get; }
 	}
 }

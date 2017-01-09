@@ -1,8 +1,9 @@
 ﻿namespace SchoolClasses
 {
 	using System.Collections.Generic;
+	using Interfaces;
 
-	class Teacher: Person, IComentable
+	class Teacher: Person, ITeacher, IComentable
 	{
 		public Teacher(string name, IList<Discipline> collection)
 			: base(name)
@@ -15,6 +16,6 @@
 			base.Comment = comment;
 		}
 
-		IList<Discipline> Disciplines { get; }
+		public IEnumerable<Discipline> Disciplines { get; }
 	}
 }
