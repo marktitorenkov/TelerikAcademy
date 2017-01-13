@@ -1,6 +1,7 @@
 ﻿namespace AnimalHierarchy.Models
 {
 	using System;
+	using Interfaces;
 
 	public class Tomcat: Cat, ISound
 	{
