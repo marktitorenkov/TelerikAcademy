@@ -17,6 +17,7 @@
 		}
 
 		public IEnumerable<Teacher> Teachers { get; }
+		public IEnumerable<Student> Students { get; }
 		public string Identifier { get; }
 		public string Comment { get; }
 	}
