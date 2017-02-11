@@ -1,35 +1,37 @@
 ﻿namespace SchoolSystem.Tests.Course
 {
 	using System;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using Contracts;
+	using Moq;
+	using NUnit.Framework;
 	using SchoolSystem;
 
-	[TestClass]
+	[TestFixture]
 	public class CourseRemoveStudent_Should
 	{
-		[TestMethod]
-		public void CourseRemoveStudent_Should_ThrowAnArgumentNullException_WhenStudentIsNull()
+		[Test]
+		public void ThrowArgumentNullException_WhenStudentIsNull()
 		{
+			// Arrange
 			var course = new Course("Valid name");
-
-			Assert.ThrowsException<ArgumentNullException>(delegate ()
-			{
-				course.RemoveStudent(null);
-			});
+			var mockStudent = new Mock<IStudent>();
+			course.AddStudent(mockStudent.Object);
+			
+			// Act and Assert
+			Assert.Throws<ArgumentNullException>(() => course.RemoveStudent(null));
 		}
 
-		[TestMethod]
-		public void CourseRemoveStudent_Should_ThrowAnException_WhenStudentIsNotInTheCourse()
+		[Test]
+		public void ThrowException_WhenStudentIsNotInTheCourse()
 		{
+			// Arrange
 			var course = new Course("Valid name");
-			var studentInCourse = new Student("Valid", "Name", 0);
-			var studentNotInCourse = new Student("Valid", "Name", 1);
-			course.AddStudent(studentInCourse);
+			var mockStudent = new Mock<IStudent>();
+			var mockStudentNotIncourse = new Mock<IStudent>();
+			course.AddStudent(mockStudent.Object);
 
-			Assert.ThrowsException<Exception>(delegate ()
-			{
-				course.RemoveStudent(studentNotInCourse);
-			});
+			// Act and Assert
+			Assert.Throws<Exception>(() => course.RemoveStudent(mockStudentNotIncourse.Object));
 		}
 	}
 }

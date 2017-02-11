@@ -1,47 +1,52 @@
 ﻿namespace SchoolSystem.Tests.Course
 {
 	using System;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using Contracts;
+	using Moq;
+	using NUnit.Framework;
 	using SchoolSystem;
 
-	[TestClass]
+	[TestFixture]
 	public class CourseAddStudent_Should
 	{
-		[TestMethod]
-		public void CourseAddStudent_Should_ThrwoAnException_WhenLimitExceded()
+		[Test]
+		public void ThrowArgumentNullException_WhenStudentIsNull()
 		{
+			// Arrange
 			var course = new Course("Valid name");
-			var validStudent = new Student("Valid", "Name", 0);
 
-			Assert.ThrowsException<Exception>(delegate ()
+			// Act and Assert
+			Assert.Throws<ArgumentNullException>(() => course.AddStudent(null));
+		}
+
+		[Test]
+		public void AddStudent_WhenValidStudentIsPassed()
+		{
+			// Arrange
+			var course = new Course("Valid name");
+			var mockStudent = new Mock<IStudent>();
+
+			// Act
+			course.AddStudent(mockStudent.Object);
+
+			// Assert
+			Assert.That(course.Students.Contains(mockStudent.Object));
+		}
+
+		[Test]
+		public void ThrowArgumentException_WhenMoreThan30StudentsAreAdded()
+		{
+			// Arrange
+			var course = new Course("Valid name");
+			var mockStudent = new Mock<IStudent>();
+
+			// Act & Assert
+			Assert.Throws<Exception>(() =>
 			{
-				for (int i = 0; i <= 30; i++)
+				for (int i = 0; i < 31; i++)
 				{
-					course.AddStudent(validStudent);
+					course.AddStudent(mockStudent.Object);
 				}
-			});
-		}
-
-		[TestMethod]
-		public void CourseAddStudent_ShouldNot_ThrwoAnException_WhenInLimits()
-		{
-			var course = new Course("Valid name");
-			var validStudent = new Student("Valid", "Name", 0);
-
-			for (int i = 0; i < 30; i++)
-			{
-				course.AddStudent(validStudent);
-			}
-		}
-
-		[TestMethod]
-		public void CourseAddStudent_Should_ThrowAnArguemtnNullException_WhenStudentIsNull()
-		{
-			var course = new Course("Valid name");
-
-			Assert.ThrowsException<ArgumentNullException>(delegate ()
-			{
-				course.AddStudent(null);
 			});
 		}
 	}

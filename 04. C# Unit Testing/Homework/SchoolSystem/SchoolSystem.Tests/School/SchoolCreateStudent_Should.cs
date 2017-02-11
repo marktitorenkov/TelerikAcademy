@@ -1,55 +1,64 @@
 ﻿namespace SchoolSystem.Tests.School
 {
-	using System;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using NUnit.Framework;
 	using SchoolSystem;
 
-	[TestClass]
+	[TestFixture]
 	public class SchoolCreateStudent_Should
 	{
-		[TestMethod]
-		public void SchoolCreateStudent_Should_ThrowAnException_WhenIDLimitExceded()
+		[Test]
+		public void ReturnStudentWithCorrectName_WhenValidNameIsPassed()
 		{
+			// Arrange
 			var school = new School();
-				
-			Assert.ThrowsException<Exception>(delegate()
-			{
-				for (int i = 0; i <= 90000; i++)
-				{
-					school.CreateStudent("Valid", "Name");
-				}
-			});
+
+			// Act
+			var student = school.CreateStudent("Valid", "Name");
+
+			// Assert
+			Assert.AreEqual(student.FirstName, "Valid");
+			Assert.AreEqual(student.LastName, "Name");
 		}
 
-		[TestMethod]
-		public void SchoolCreateStudent_Should_ReturnCorrectStudent_WhenValidNameGiven()
+		[Test]
+		public void ReturnStudentWithCorrectStartID_WhenValidNameIsPassed()
 		{
+			// Arrange
 			var school = new School();
-			var validStudent = new Student("Valid", "Name", 10000);
-			var testStudent = school.CreateStudent("Valid", "Name");
 
-			Assert.IsTrue(
-				validStudent.FirstName == testStudent.FirstName &&
-				validStudent.LastName == testStudent.LastName &&
-				validStudent.Id == testStudent.Id
-			);
+			// Act
+			var student = school.CreateStudent("Valid", "Name");
+
+			// Assert
+			Assert.AreEqual(student.Id, 10000);
 		}
 
-		[TestMethod]
-		public void SchoolCreateStudent_Should_CreateStudents_With_ConsecutiveIds()
+		[Test]
+		public void ReturnStudentsWithConsecutiveIDs_WhenValidNameIsPassed()
 		{
-			bool validID = true;
+			// Arrange
 			var school = new School();
 
-			for (int i = 0; i < 4; i++)
-			{
-				var student = school.CreateStudent("Valid", "Name");
-				if (student.Id != 10000 + i)
-				{
-					validID = false;
-				}
-			}
-			Assert.IsTrue(validID);
+			// Act
+			var student1 = school.CreateStudent("Valid", "Name");
+			var student2 = school.CreateStudent("Valid", "Name");
+
+			// Assert
+			Assert.AreEqual(student1.Id, 10000);
+			Assert.AreEqual(student2.Id, 10001);
+		}
+
+		[Test]
+		public void AddsStudentToCourse_WhenValidNameIsPAssed()
+		{
+			// Arrange
+			var school = new School();
+
+			// Act
+			var student = school.CreateStudent("Valid", "Name");
+
+			// Assert
+			Assert.That(school.Students.Contains(student));
 		}
 	}
 }

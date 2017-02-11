@@ -2,34 +2,50 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using Contracts;
 
-	public class School
+	public class School : ISchool
 	{
+		private ICollection<ICourse> courses;
+		private ICollection<IStudent> students;
+
 		public School()
 		{
-			this.Courses = new List<Course>();
-			this.Students = new List<Student>();
+			this.courses = new List<ICourse>();
+			this.students = new List<IStudent>();
 		}
 
-		public List<Course> Courses { get; }
-		public List<Student> Students { get; }
-
-		public Student CreateStudent(string firstName, string lastName)
+		public ICollection<ICourse> Courses
 		{
-			int id = this.Students.Count + 10000;
+			get
+			{
+				return new List<ICourse>(this.courses);
+			}
+		}
+		public ICollection<IStudent> Students
+		{
+			get
+			{
+				return new List<IStudent>(this.students);
+			}
+		}
+
+		public IStudent CreateStudent(string firstName, string lastName)
+		{
+			int id = this.students.Count + 10000;
 			if (id > 99999)
 			{
-				throw new Exception("Students limit reached");
+				throw new Exception("Students limit reached.");
 			}
 			var student = new Student(firstName, lastName, id);
-			this.Students.Add(student);
+			this.students.Add(student);
 			return student;
 		}
 
-		public Course CreateCourse(string name)
+		public ICourse CreateCourse(string name)
 		{
 			var course = new Course(name);
-			this.Courses.Add(course);
+			this.courses.Add(course);
 			return course;
 		}
 	}

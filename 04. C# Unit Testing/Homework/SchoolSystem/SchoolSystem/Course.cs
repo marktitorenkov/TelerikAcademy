@@ -2,48 +2,53 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using Contracts;
 
-	public class Course
+	public class Course : ICourse
 	{
+		private ICollection<IStudent> students;
+
 		public Course(string name)
 		{
-			if (name == null)
+			if (string.IsNullOrWhiteSpace(name))
 			{
-				throw new ArgumentNullException("Name cannot be null");
-			}
-			if (name.Trim() == string.Empty)
-			{
-				throw new ArgumentException("Name cannot be empty");
+				throw new ArgumentException("Name cannot be empty.");
 			}
 			this.Name = name;
-			this.Students = new List<Student>();
+			this.students = new List<IStudent>();
 		}
 
 		public string Name { get; }
-		public List<Student> Students { get; }
-
-		public void AddStudent(Student student)
+		public ICollection<IStudent> Students
 		{
-			if (student == null)
+			get
 			{
-				throw new ArgumentNullException();
+				return new List<IStudent>(this.students);
 			}
-			if (this.Students.Count == 30)
-			{
-				throw new Exception("Course limit reached");
-			}
-			this.Students.Add(student);
 		}
 
-		public void RemoveStudent(Student student)
+		public void AddStudent(IStudent student)
 		{
 			if (student == null)
 			{
 				throw new ArgumentNullException();
 			}
-			if (!this.Students.Remove(student))
+			if (this.students.Count == 30)
 			{
-				throw new Exception("Student is not in the course");
+				throw new Exception("Course limit reached.");
+			}
+			this.students.Add(student);
+		}
+
+		public void RemoveStudent(IStudent student)
+		{
+			if (student == null)
+			{
+				throw new ArgumentNullException();
+			}
+			if (!this.students.Remove(student))
+			{
+				throw new Exception("Student is not in the course.");
 			}
 		}
 	}

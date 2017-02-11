@@ -1,31 +1,51 @@
 ﻿namespace SchoolSystem.Tests.Course
 {
 	using System;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using NUnit.Framework;
 	using SchoolSystem;
 
-	[TestClass]
+	[TestFixture]
 	public class Course_Should
 	{
-		[TestMethod]
-		[DataRow("")]
-		[DataRow(" ")]
-		[DataRow("    ")]
-		public void Course_Should_ThrowAnArgumentException_WhenEmptyNameGiven(string name)
+		[Test]
+		public void SetName_WhenValidNamePassed()
 		{
-			Assert.ThrowsException<ArgumentException>(delegate ()
-			{
-				new Course(name);
-			});
+			// Arrange & Act
+			var course = new Course("Valid name");
+
+			// Assert
+			Assert.AreEqual("Valid name", course.Name);
 		}
 
-		[TestMethod]
-		public void Course_Should_ThrowAnArgumentNullException_WhenNullNameGiven()
+		[Test]
+		public void InitilizeStudentsCollection_WhenValidNamePassed()
 		{
-			Assert.ThrowsException<ArgumentNullException>(delegate ()
-			{
-				new Course(null);
-			});
+			// Arrange & Act
+			var course = new Course("Valid name");
+
+			// Assert
+			Assert.IsNotNull(course.Students);
+		}
+
+		[Test]
+		public void ThrowArgumentException_WhenEmptyStringNameIsPassed()
+		{
+			// Act & Assert
+			Assert.Throws<ArgumentException>(() => new Course(""));
+		}
+
+		[Test]
+		public void ThrowArgumentException_WhenOnlyWhiteSpaceNameIsPassed()
+		{
+			// Act & Assert
+			Assert.Throws<ArgumentException>(() => new Course("      "));
+		}
+
+		[Test]
+		public void ThrowArgumentException_WhenNullNameIsPassed()
+		{
+			// Act & Assert
+			Assert.Throws<ArgumentException>(() => new Course(null));
 		}
 	}
 }

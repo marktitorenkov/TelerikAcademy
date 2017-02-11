@@ -1,22 +1,35 @@
 ﻿namespace SchoolSystem.Tests.School
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using NUnit.Framework;
 	using SchoolSystem;
 
-	[TestClass]
+	[TestFixture]
 	public class SchoolCreateCourse_Should
 	{
-		[TestMethod]
-		public void SchoolCreateCourse_Should_ReturnAValidCourse()
+		[Test]
+		public void ReturnCourseWithCorrectName_WhenValidNameIsPassed()
 		{
+			// Arrange
 			var school = new School();
-			var validCourse = new Course("Valid name");
-			var testCourse = school.CreateCourse("Valid name");
 
-			Assert.IsTrue(
-				validCourse.Name == testCourse.Name &&
-				testCourse.Students != null
-			);
+			// Act
+			var course = school.CreateCourse("Valid name");
+
+			// Assert
+			Assert.AreEqual(course.Name, "Valid name");
+		}
+
+		[Test]
+		public void AddsTheCourseToTheList_WhenValidNameIsPassed()
+		{
+			// Arrange
+			var school = new School();
+
+			// Act
+			var course = school.CreateCourse("Valid name");
+
+			// Assert
+			Assert.That(school.Courses.Contains(course));
 		}
 	}
 }

@@ -1,20 +1,29 @@
 ﻿namespace SchoolSystem.Tests.School
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using NUnit.Framework;
 	using SchoolSystem;
-
-	[TestClass]
+	
+	[TestFixture]
 	public class School_Should
 	{
-		[TestMethod]
-		public void School_Should_InitializeNewStudentsAndCourseLists()
+		[Test]
+		public void CorrectlyInitilizeCoursesCollection()
 		{
+			// Arrange & Act
 			var school = new School();
 
-			Assert.IsTrue(
-				school.Students != null &&
-				school.Courses != null
-			);
+			// Assert
+			Assert.IsNotNull(school.Courses);
+		}
+
+		[Test]
+		public void CorrectlyInitilizeStudentsCollection()
+		{
+			// Arrange & Act
+			var school = new School();
+
+			// Assert
+			Assert.IsNotNull(school.Students);
 		}
 	}
 }
