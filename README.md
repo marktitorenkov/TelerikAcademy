@@ -22,9 +22,9 @@
 ## Module 2
 
 - ### C# Programming
-|      Course     |    Points   | Place in TA |   Passed    |
-|:---------------:|:-----------:|:-----------:|:-----------:|
-| C# Unit Testing | In progress | In progress | In progress |
+|                      Course                     |    Points   | Place in TA |    Passed   |
+|:-----------------------------------------------:|:-----------:|:-----------:|:-----------:|
+| [C# Unit Testing](/04.%20C%23%20Unit%20Testing) | In progress | In progress | In progress |
 
 - ### Web Front-End Develpment
 |                   Course                  |    Points   | Place in TA |    Passed   |
