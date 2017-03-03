@@ -22,11 +22,13 @@
 ## Module 2
 
 - ### C# Programming
-|                      Course                     |    Points   | Place in TA |    Passed   |
-|:-----------------------------------------------:|:-----------:|:-----------:|:-----------:|
-| [C# Unit Testing](/04.%20C%23%20Unit%20Testing) | In progress | In progress | In progress |
+|                      Course                     | Points | Place in TA |      Passed     |
+|:-----------------------------------------------:|:------:|:-----------:|:---------------:|
+| [C# Unit Testing](/04.%20C%23%20Unit%20Testing) |  68.6  |     16th    | With excellence |
+|            High Quality Code - Part 1           |   N/A  |     N/A     |       N/A       |
 
 - ### Web Front-End Develpment
-|                   Course                  |    Points   | Place in TA |    Passed   |
-|:-----------------------------------------:|:-----------:|:-----------:|:-----------:|
-| [JavaScript OOP](/04.%20Javascript%20OOP) | In progress | In progress | In progress |
+|                   Course                  | Points | Place in TA |      Passed     |
+|:-----------------------------------------:|:------:|:-----------:|:---------------:|
+| [JavaScript OOP](/04.%20Javascript%20OOP) |  79.8  |     24th    | With excellence |
+|           JavaScript UI and DOM           |   N/A  |     N/A     |       N/A       |
