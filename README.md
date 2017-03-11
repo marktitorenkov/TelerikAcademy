@@ -15,20 +15,20 @@
 |:-----------------------------------------------------------:|:------:|:-----------:|:---------------:|
 |                     [HTML](/01.%20HTML)                     |  87.57 |      5th    | With excellence |
 |                      [CSS](/02.%20CSS)                      |  84.54 |     23rd    | With excellence |
-| [JavaScript Fundamentals](/03.%20Javascript%20Fundamentals) |  91.44 |     10th    | With excellence |
+| [JavaScript Fundamentals](/03.%20JavaScript%20Fundamentals) |  91.44 |     10th    | With excellence |
 
 - *In top 15 students of Module 1*
  
 ## Module 2
 
 - ### C# Programming
-|                      Course                     | Points | Place in TA |      Passed     |
-|:-----------------------------------------------:|:------:|:-----------:|:---------------:|
-| [C# Unit Testing](/04.%20C%23%20Unit%20Testing) |  68.6  |     16th    | With excellence |
-|            High Quality Code - Part 1           |   N/A  |     N/A     |       N/A       |
+|                                Course                               | Points | Place in TA |      Passed     |
+|:-------------------------------------------------------------------:|:------:|:-----------:|:---------------:|
+|           [C# Unit Testing](/04.%20C%23%20Unit%20Testing)           |  68.6  |     16th    | With excellence |
+| [High Quality Code - Part 1](/High%20Quality%20Code%20-%20Part%201) |   N/A  |     N/A     |       N/A       |
 
 - ### Web Front-End Develpment
-|                   Course                  | Points | Place in TA |      Passed     |
-|:-----------------------------------------:|:------:|:-----------:|:---------------:|
-| [JavaScript OOP](/04.%20Javascript%20OOP) |  79.8  |     24th    | With excellence |
-|           JavaScript UI and DOM           |   N/A  |     N/A     |       N/A       |
+|                            Course                           | Points | Place in TA |      Passed     |
+|:-----------------------------------------------------------:|:------:|:-----------:|:---------------:|
+|          [JavaScript OOP](/04.%20JavaScript%20OOP)          |  79.8  |     24th    | With excellence |
+| [JavaScript UI and DOM](/05.%20JavaScript%20UI%20and%20DOM) |   N/A  |     N/A     |       N/A       |
