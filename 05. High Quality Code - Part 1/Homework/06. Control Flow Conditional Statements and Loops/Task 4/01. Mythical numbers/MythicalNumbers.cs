@@ -1,8 +1,8 @@
 ﻿using System;
 
-class MythicalNumbers
+public class MythicalNumbers
 {
-	static void Main()
+	public static void Main()
 	{
 		string number = Console.ReadLine();
 		float firstDigit = number[0] - '0';
@@ -18,8 +18,9 @@ class MythicalNumbers
 		{
 			result = (firstDigit * secondDigit) / thirdDigit;
 		}
-		else // c > 5
+		else
 		{
+			// c > 5
 			result = (firstDigit + secondDigit) * thirdDigit;
 		}
 

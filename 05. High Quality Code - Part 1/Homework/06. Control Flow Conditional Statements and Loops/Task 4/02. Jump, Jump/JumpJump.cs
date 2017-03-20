@@ -1,8 +1,8 @@
 ﻿using System;
 
-class JumpJump
+public class JumpJump
 {
-	static void Main()
+	public static void Main()
 	{
 		string directions = Console.ReadLine();
 
@@ -19,6 +19,7 @@ class JumpJump
 					Console.WriteLine($"Too drunk to go on after {position}!");
 					break;
 				}
+
 				if (charAtPosition == '^')
 				{
 					Console.WriteLine($"Jump, Jump, DJ Tomekk kommt at {position}!");

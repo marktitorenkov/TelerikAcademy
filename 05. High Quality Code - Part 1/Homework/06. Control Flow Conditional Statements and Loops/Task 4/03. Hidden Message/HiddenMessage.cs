@@ -1,15 +1,15 @@
 ﻿using System;
 
-class HiddenMessage
+public class HiddenMessage
 {
-	static void Main()
+	public static void Main()
 	{
 		string secretMessage = string.Empty;
 
 		while (true)
 		{
-			int startindex;
 			// If the line is not a number it must be 'end'
+			int startindex;
 			if (!int.TryParse(Console.ReadLine(), out startindex))
 			{
 				break;

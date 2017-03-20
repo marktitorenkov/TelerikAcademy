@@ -1,8 +1,8 @@
 ﻿using System;
 
-class MixingNumbers
+public class MixingNumbers
 {
-	static void Main()
+	public static void Main()
 	{
 		int count = int.Parse(Console.ReadLine());
 
@@ -25,7 +25,7 @@ class MixingNumbers
 			ab = cd;
 		}
 
-		Console.WriteLine(String.Join(" ", mixed));
-		Console.WriteLine(String.Join(" ", substracted));
+		Console.WriteLine(string.Join(" ", mixed));
+		Console.WriteLine(string.Join(" ", substracted));
 	}
 }
