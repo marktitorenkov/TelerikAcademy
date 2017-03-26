@@ -55,7 +55,8 @@
 		/// <returns>A 16-bit signed integer equivalent to the number specified in input.</returns>
 		public static short ToShort(this string input)
 		{
-			short.TryParse(input, out short shortValue);
+			short shortValue;
+			short.TryParse(input, out shortValue);
 			return shortValue;
 		}
 
@@ -66,7 +67,8 @@
 		/// <returns>A 32-bit signed integer equivalent to the number specified in input.</returns>
 		public static int ToInteger(this string input)
 		{
-			int.TryParse(input, out int integerValue);
+			int integerValue;
+			int.TryParse(input, out integerValue);
 			return integerValue;
 		}
 
@@ -77,7 +79,8 @@
 		/// <returns>A 64-bit signed integer equivalent to the number specified in input.</returns>
 		public static long ToLong(this string input)
 		{
-			long.TryParse(input, out long longValue);
+			long longValue;
+			long.TryParse(input, out longValue);
 			return longValue;
 		}
 
@@ -88,7 +91,8 @@
 		/// <returns>An object that is equivalent to the date and time contained in input or null if the parse failed.</returns>
 		public static DateTime ToDateTime(this string input)
 		{
-			DateTime.TryParse(input, out DateTime dateTimeValue);
+			DateTime dateTimeValue;
+			DateTime.TryParse(input, out dateTimeValue);
 			return dateTimeValue;
 		}
 
