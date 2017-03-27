@@ -19,11 +19,11 @@ function solve() {
 		}
 	}
 
-	showElement = function(el) {
+	function showElement(el) {
 		el.style.display = '';
 	}
 
-	hideElement = function(el) {
+	function hideElement(el) {
 		el.style.display = 'none';
 	}
 
