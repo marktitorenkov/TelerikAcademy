@@ -1,0 +1,8 @@
+﻿Bugs:
+
+#1 In CommandsFactory CreateUserCommand is missing
+#2 Method for logging error in FileLogger is commented out.
+#3 In ModelsFactory CreateUser email and username are swapped.
+#4 Some Command classes had their own instances of the databse and therefore were not sharing the data betweeen eachother. Fixed by moving dtabase as an external dependency.
+
+Bottleneck: In the class CommandsFactory, the method BuildCommand always waits for 1 second before doing anything. Fixed by removing the unnecessary while loop.
