@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Task1
+namespace BinaryTree
 {
 	class Program
 	{
