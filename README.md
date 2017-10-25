@@ -26,7 +26,7 @@
 | [High Quality Code - Part 2](/06.%20High%20Quality%20Code%20-%20Part%202) |  66.9  |     18th    | Passed with excellence |
 |        [JavaScript Applications](/06.%20JavaScript%20Applications)        |  76.1  |     54th    | Passed with excellence |
 |                [Design Patterns](/07.%20Design%20Patterns)                |  66.3  |     16th    | Passed with excellence |
-|                       [Databases](/07.%20Databases)                       |  74.9  |     36th    |         Passed         |
+|                       [Databases](/07.%20Databases)                       |  75.0  |     36th    | Passed with excellence |
 
 ## Module 3
 
